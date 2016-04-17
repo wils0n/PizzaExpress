@@ -55,6 +55,9 @@ class TamanioController: WKInterfaceController {
     }
     
     @IBAction func nextTamanio() {
+        if(resultado.count == 1){
+            resultado.removeLast()
+        }
         resultado.append(tamanioElegido)
         pushControllerWithName("IdentificadorTamanio", context: resultado)
     }

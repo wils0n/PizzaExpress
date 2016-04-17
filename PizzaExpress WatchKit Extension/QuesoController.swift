@@ -54,6 +54,9 @@ class QuesoController: WKInterfaceController {
     }
     
     @IBAction func nextQueso() {
+        if(resultado?.count == 3){
+            resultado?.removeLast()
+        }
         resultado!.append(quesoElegido)
         pushControllerWithName("IdentificadorIngredientes", context: resultado)
     }

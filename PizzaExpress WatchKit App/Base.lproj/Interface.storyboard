@@ -10,7 +10,9 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PizzaExpress_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="136" height="38.5" alignment="left" text="Bienvenido a PizzaExpress" textAlignment="center" numberOfLines="2" id="bWI-gD-wff"/>
+                        <label width="136" height="38.5" alignment="center" text="Bienvenido" textAlignment="center" numberOfLines="2" id="bWI-gD-wff"/>
+                        <label width="136" height="20.5" alignment="center" text="a" textAlignment="center" id="zEJ-Wt-at6"/>
+                        <label width="134" height="26.5" alignment="center" text="Pizza Express" textAlignment="center" id="qZj-M2-3vh"/>
                         <button width="1" alignment="left" title="Empezar" id="19T-6U-5ZC">
                             <color key="backgroundColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -27,10 +29,10 @@
             <objects>
                 <controller id="ACq-gH-N4K" customClass="TamanioController" customModule="PizzaExpress_WatchKit_Extension">
                     <items>
-                        <group width="136" alignment="left" id="akv-Xz-tmP">
+                        <group width="1" alignment="left" id="akv-Xz-tmP">
                             <items>
                                 <label width="101.5" height="29.5" alignment="left" text="Elige tamaño" id="eww-OK-W71"/>
-                                <button width="32" height="35.5" alignment="left" title="&gt;" id="Ddp-no-5QR">
+                                <button width="32" height="35.5" alignment="right" title="&gt;" id="Ddp-no-5QR">
                                     <color key="backgroundColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="nextTamanio" destination="ACq-gH-N4K" id="YP2-nQ-1KY"/>
@@ -52,6 +54,20 @@
             </objects>
             <point key="canvasLocation" x="529" y="350"/>
         </scene>
+        <!--IdentifiquerFin-->
+        <scene sceneID="F4L-Ve-lNJ">
+            <objects>
+                <controller identifier="IdentifiquerFin" id="czg-gb-t6P">
+                    <items>
+                        <label width="134" height="41.5" alignment="center" text="MUY BIEN!!" textAlignment="center" id="gFD-2N-3cM">
+                            <color key="textColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label width="134" height="72.5" alignment="center" text="Tu pedido está siendo atendido" textAlignment="center" numberOfLines="2" id="Nys-bY-eWd"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="569" y="643"/>
+        </scene>
         <!--IdentificadorTamanio-->
         <scene sceneID="DZ9-KR-D4O">
             <objects>
@@ -60,7 +76,7 @@
                         <group width="1" alignment="left" id="PBx-Fz-D2u">
                             <items>
                                 <label width="101.5" height="34.5" alignment="left" text="Elige Masa" id="d2j-oz-iXF"/>
-                                <button width="32" height="35.5" alignment="left" title="&gt;" id="moE-qf-BxB">
+                                <button width="32" height="35.5" alignment="right" title="&gt;" id="moE-qf-BxB">
                                     <color key="backgroundColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="nextMasa" destination="Bhh-qB-p6D" id="Z25-Kf-WCi"/>
@@ -90,7 +106,7 @@
                         <group width="1" alignment="left" id="4i0-ap-W7m">
                             <items>
                                 <label width="101.5" height="34.5" alignment="left" text="Elige Queso" id="ta9-dI-22Y"/>
-                                <button width="32" height="35.5" alignment="left" title="&gt;" id="I5M-Bj-09i">
+                                <button width="32" height="35.5" alignment="right" title="&gt;" id="I5M-Bj-09i">
                                     <color key="backgroundColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="nextQueso" destination="ILV-5w-rlU" id="ogt-uv-Zlo"/>
@@ -112,6 +128,63 @@
             </objects>
             <point key="canvasLocation" x="1109" y="350"/>
         </scene>
+        <!--IdentificadorConfirmacion-->
+        <scene sceneID="wRF-1x-rzS">
+            <objects>
+                <controller identifier="IdentificadorConfirmacion" id="AMz-4w-Uco" customClass="ConfirmationController" customModule="PizzaExpress_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="Mdn-ch-bLX">
+                            <items>
+                                <label width="101.5" height="34.5" alignment="left" text="Confirmación" id="KMT-Hy-AH5"/>
+                                <button width="32" height="35.5" alignment="right" title="&gt;" id="gvy-GG-iq8">
+                                    <color key="backgroundColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="nextConfirmation" destination="AMz-4w-Uco" id="UUk-0W-88s"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label width="136" height="25.5" alignment="left" text="Tu pizza contiene:" id="YVG-T3-hrX"/>
+                        <label width="1" alignment="left" numberOfLines="10" id="y0H-8x-LZx"/>
+                        <group width="1" alignment="left" layout="vertical" id="wBq-GE-tAa">
+                            <items>
+                                <label alignment="left" text="Tamaño:" id="WqT-Sk-J9M"/>
+                                <label width="136" alignment="left" text="Label" textAlignment="right" id="sXI-7v-UzF">
+                                    <color key="textColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="fsp-7G-p5w">
+                            <items>
+                                <label alignment="left" text="Masa:" id="4OT-9g-a3c"/>
+                                <label width="136" alignment="left" text="Label" textAlignment="right" id="r8X-Xx-7gY">
+                                    <color key="textColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="i0z-jf-Eff">
+                            <items>
+                                <label alignment="left" text="Queso:" id="vQl-fV-9bv"/>
+                                <label width="136" alignment="left" text="Label" textAlignment="right" id="lLB-s0-wEh">
+                                    <color key="textColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label alignment="left" text="Ingredientes:" id="swt-j6-jJ2"/>
+                        <label alignment="left" text="Label" numberOfLines="8" id="TfB-ug-5JR">
+                            <color key="textColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="ingredientesLbl" destination="TfB-ug-5JR" id="ndB-Ve-DJQ"/>
+                        <outlet property="masaLbl" destination="r8X-Xx-7gY" id="c3c-Ao-Aa4"/>
+                        <outlet property="quesoLbl" destination="lLB-s0-wEh" id="a5s-BX-FZY"/>
+                        <outlet property="tamanioLbl" destination="sXI-7v-UzF" id="scl-6L-TpB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="833" y="696"/>
+        </scene>
         <!--IdentificadorIngredientes-->
         <scene sceneID="F1p-Sb-Wb4">
             <objects>
@@ -120,22 +193,50 @@
                         <group width="1" alignment="left" id="wDb-kg-NEk">
                             <items>
                                 <label width="101.5" alignment="left" text="Ingredientes" id="Lgb-Kh-f1W"/>
-                                <button width="32" height="35.5" alignment="left" title="&gt;" id="6vi-x0-h3H">
+                                <button width="32" height="35.5" alignment="right" title="&gt;" id="6vi-x0-h3H">
                                     <color key="backgroundColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="nextQueso" destination="ILV-5w-rlU" id="ZGz-mS-ydq"/>
+                                        <action selector="nextIngredientes" destination="G8I-K3-8SK" id="gRv-MU-AAW"/>
                                     </connections>
                                 </button>
                             </items>
                         </group>
                         <separator alignment="left" id="zBD-5z-5c6"/>
-                        <switch width="1" alignment="left" value="YES" title="Jamón" id="msM-cr-it4"/>
-                        <switch width="1" alignment="left" value="YES" title="Pepperoni" id="gJ0-2K-Lv1"/>
-                        <switch width="1" alignment="left" value="YES" title="Pavo" id="384-cP-npu"/>
-                        <switch width="1" alignment="left" value="YES" title="Salchicha" id="ZgK-Ly-MiW"/>
-                        <switch width="1" alignment="left" value="YES" title="Aceituna" id="B9Q-hd-DKM"/>
-                        <switch width="1" alignment="left" value="YES" title="Cebolla" id="JBQ-qn-4EE"/>
-                        <switch width="1" alignment="left" value="YES" title="Pimiento" id="NGE-IN-UAa"/>
+                        <switch width="1" alignment="left" title="Jamón" id="msM-cr-it4">
+                            <connections>
+                                <action selector="selectedJamon:" destination="G8I-K3-8SK" id="pRw-fs-ShZ"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pepperoni" id="gJ0-2K-Lv1">
+                            <connections>
+                                <action selector="selectedPepperoni:" destination="G8I-K3-8SK" id="4OM-k2-iMn"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pavo" id="384-cP-npu">
+                            <connections>
+                                <action selector="selectedPavo:" destination="G8I-K3-8SK" id="DA4-kD-vck"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Salchicha" id="ZgK-Ly-MiW">
+                            <connections>
+                                <action selector="selectedSalchicha:" destination="G8I-K3-8SK" id="S5U-42-3uj"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Aceituna" id="B9Q-hd-DKM">
+                            <connections>
+                                <action selector="selectedAceituna:" destination="G8I-K3-8SK" id="Mfj-C3-jfG"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Cebolla" id="JBQ-qn-4EE">
+                            <connections>
+                                <action selector="selectedCebolla:" destination="G8I-K3-8SK" id="86G-Np-U3l"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pimiento" id="NGE-IN-UAa">
+                            <connections>
+                                <action selector="selectedPimiento:" destination="G8I-K3-8SK" id="SUk-rX-A3E"/>
+                            </connections>
+                        </switch>
                     </items>
                 </controller>
             </objects>

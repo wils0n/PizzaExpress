@@ -55,6 +55,9 @@ class MasaController: WKInterfaceController {
     }
 
     @IBAction func nextMasa() {
+        if(resultado?.count == 2){
+            resultado?.removeLast()
+        }
         resultado!.append(masaElegida)
         pushControllerWithName("IdentificadorMasa", context: resultado)
     }
