@@ -21,6 +21,8 @@
 		07E1EE4B1CC3CDE300198CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E1EE4A1CC3CDE300198CDE /* Assets.xcassets */; };
 		07E1EE5B1CC3D97100198CDE /* TamanioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E1EE5A1CC3D97100198CDE /* TamanioController.swift */; };
 		07E1EE5D1CC3F3C700198CDE /* MasaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E1EE5C1CC3F3C700198CDE /* MasaController.swift */; };
+		07E1EE5F1CC4186100198CDE /* QuesoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E1EE5E1CC4186100198CDE /* QuesoController.swift */; };
+		07E1EE611CC41CED00198CDE /* IngredientesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E1EE601CC41CED00198CDE /* IngredientesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		07E1EE4C1CC3CDE300198CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07E1EE5A1CC3D97100198CDE /* TamanioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TamanioController.swift; sourceTree = "<group>"; };
 		07E1EE5C1CC3F3C700198CDE /* MasaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasaController.swift; sourceTree = "<group>"; };
+		07E1EE5E1CC4186100198CDE /* QuesoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuesoController.swift; sourceTree = "<group>"; };
+		07E1EE601CC41CED00198CDE /* IngredientesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 				07E1EE4C1CC3CDE300198CDE /* Info.plist */,
 				07E1EE5A1CC3D97100198CDE /* TamanioController.swift */,
 				07E1EE5C1CC3F3C700198CDE /* MasaController.swift */,
+				07E1EE5E1CC4186100198CDE /* QuesoController.swift */,
+				07E1EE601CC41CED00198CDE /* IngredientesController.swift */,
 			);
 			path = "PizzaExpress WatchKit Extension";
 			sourceTree = "<group>";
@@ -303,6 +309,8 @@
 			files = (
 				07E1EE491CC3CDE300198CDE /* ExtensionDelegate.swift in Sources */,
 				07E1EE5D1CC3F3C700198CDE /* MasaController.swift in Sources */,
+				07E1EE611CC41CED00198CDE /* IngredientesController.swift in Sources */,
+				07E1EE5F1CC4186100198CDE /* QuesoController.swift in Sources */,
 				07E1EE5B1CC3D97100198CDE /* TamanioController.swift in Sources */,
 				07E1EE471CC3CDE300198CDE /* InterfaceController.swift in Sources */,
 			);

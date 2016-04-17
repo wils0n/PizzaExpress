@@ -19,6 +19,10 @@ class TamanioController: WKInterfaceController {
         ("Mediana","Mediana"),
         ("Pequeña","Pequeña")]
     
+    var tamanioElegido = "Grande"
+    
+    var resultado:[String] = []
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -46,10 +50,13 @@ class TamanioController: WKInterfaceController {
 
     @IBAction func selectedTamanio(value: Int) {
         NSLog("List Picker: \(tamanioList[value].0) selected")
+        
+        tamanioElegido = tamanioList[value].0
     }
     
     @IBAction func nextTamanio() {
-        pushControllerWithName("IdentificadorTamanio", context: "test1")
+        resultado.append(tamanioElegido)
+        pushControllerWithName("IdentificadorTamanio", context: resultado)
     }
     
 }

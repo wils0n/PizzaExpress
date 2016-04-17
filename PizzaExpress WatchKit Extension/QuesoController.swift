@@ -1,5 +1,5 @@
 //
-//  MasaController.swift
+//  QuesoController.swift
 //  PizzaExpress
 //
 //  Created by Wilson Mejía on 17/04/16.
@@ -10,54 +10,52 @@ import WatchKit
 import Foundation
 
 
-class MasaController: WKInterfaceController {
+class QuesoController: WKInterfaceController {
     
-    @IBOutlet var masaPicker: WKInterfacePicker!
+    @IBOutlet var quesoPicker: WKInterfacePicker!
     
-    var masaList: [(String, String)] = [
-        ("Delgada","Delgada"),
-        ("Crujiente","Crujiente"),
-        ("Gruesa","Gruesa")]
-    
+    let quesoList:[(String,String)] = [
+        ("Mozarela","Morazela"),
+        ("Cheddar","Cheddar"),
+        ("Parmesano","Parmesano"),
+        ("Sin Queso","Sin Queso")]
+
     
     var resultado:[String]?
-    var masaElegida = "Delgada"
-    
+    var quesoElegido = "Mozarela"
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         resultado = context as? [String]
-        NSLog("Seleccionado: \(resultado)")
-        
+        NSLog("Seleccionado hasta queso: \(resultado)")
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        let pickerItems: [WKPickerItem] = masaList.map {
+        let pickerItems: [WKPickerItem] = quesoList.map {
             let pickerItem = WKPickerItem()
             pickerItem.title = $0.0
             pickerItem.caption = $0.1
             return pickerItem
         }
-        masaPicker.setItems(pickerItems)
+        quesoPicker.setItems(pickerItems)
     }
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    
-    @IBAction func selectedMasa(value: Int) {
-        NSLog("List Picker: \(masaList[value].0) selected")
-        masaElegida = masaList[value].0
-    }
 
-    @IBAction func nextMasa() {
-        resultado!.append(masaElegida)
-        pushControllerWithName("IdentificadorMasa", context: resultado)
+    @IBAction func selectedQueso(value: Int) {
+        NSLog("List Picker: \(quesoList[value].0) selected")
+        quesoElegido = quesoList[value].0
     }
     
+    @IBAction func nextQueso() {
+        resultado!.append(quesoElegido)
+        pushControllerWithName("IdentificadorIngredientes", context: resultado)
+    }
     
 }

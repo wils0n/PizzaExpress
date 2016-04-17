@@ -29,7 +29,7 @@
                     <items>
                         <group width="136" alignment="left" id="akv-Xz-tmP">
                             <items>
-                                <label width="99.5" height="26.5" alignment="left" text="Elige tamaño" id="eww-OK-W71"/>
+                                <label width="101.5" height="29.5" alignment="left" text="Elige tamaño" id="eww-OK-W71"/>
                                 <button width="32" height="35.5" alignment="left" title="&gt;" id="Ddp-no-5QR">
                                     <color key="backgroundColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
@@ -59,13 +59,87 @@
                     <items>
                         <group width="1" alignment="left" id="PBx-Fz-D2u">
                             <items>
-                                <label width="98.5" height="26.5" alignment="left" text="Elige Masa" id="d2j-oz-iXF"/>
+                                <label width="101.5" height="34.5" alignment="left" text="Elige Masa" id="d2j-oz-iXF"/>
+                                <button width="32" height="35.5" alignment="left" title="&gt;" id="moE-qf-BxB">
+                                    <color key="backgroundColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="nextMasa" destination="Bhh-qB-p6D" id="Z25-Kf-WCi"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
+                        <separator alignment="left" id="sTa-vF-R6G"/>
+                        <picker height="100" alignment="left" id="aho-N2-GwT">
+                            <connections>
+                                <action selector="selectedMasa:" destination="Bhh-qB-p6D" id="vf6-5u-vkH"/>
+                            </connections>
+                        </picker>
                     </items>
+                    <connections>
+                        <outlet property="masaPicker" destination="aho-N2-GwT" id="l62-Ue-bpr"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="818" y="350"/>
+        </scene>
+        <!--IdentificadorMasa-->
+        <scene sceneID="PIM-WE-IcF">
+            <objects>
+                <controller identifier="IdentificadorMasa" id="ILV-5w-rlU" customClass="QuesoController" customModule="PizzaExpress_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="4i0-ap-W7m">
+                            <items>
+                                <label width="101.5" height="34.5" alignment="left" text="Elige Queso" id="ta9-dI-22Y"/>
+                                <button width="32" height="35.5" alignment="left" title="&gt;" id="I5M-Bj-09i">
+                                    <color key="backgroundColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="nextQueso" destination="ILV-5w-rlU" id="ogt-uv-Zlo"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="4fB-6P-gtN"/>
+                        <picker height="100" alignment="left" id="7QY-vK-JwE">
+                            <connections>
+                                <action selector="selectedQueso:" destination="ILV-5w-rlU" id="7SP-9P-xdN"/>
+                            </connections>
+                        </picker>
+                    </items>
+                    <connections>
+                        <outlet property="quesoPicker" destination="7QY-vK-JwE" id="bFw-pl-UWH"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1109" y="350"/>
+        </scene>
+        <!--IdentificadorIngredientes-->
+        <scene sceneID="F1p-Sb-Wb4">
+            <objects>
+                <controller identifier="IdentificadorIngredientes" id="G8I-K3-8SK" customClass="IngredientesController" customModule="PizzaExpress_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="wDb-kg-NEk">
+                            <items>
+                                <label width="101.5" alignment="left" text="Ingredientes" id="Lgb-Kh-f1W"/>
+                                <button width="32" height="35.5" alignment="left" title="&gt;" id="6vi-x0-h3H">
+                                    <color key="backgroundColor" red="0.95737179490000002" green="0.63308754040000004" blue="0.2421550754" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="nextQueso" destination="ILV-5w-rlU" id="ZGz-mS-ydq"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="zBD-5z-5c6"/>
+                        <switch width="1" alignment="left" value="YES" title="Jamón" id="msM-cr-it4"/>
+                        <switch width="1" alignment="left" value="YES" title="Pepperoni" id="gJ0-2K-Lv1"/>
+                        <switch width="1" alignment="left" value="YES" title="Pavo" id="384-cP-npu"/>
+                        <switch width="1" alignment="left" value="YES" title="Salchicha" id="ZgK-Ly-MiW"/>
+                        <switch width="1" alignment="left" value="YES" title="Aceituna" id="B9Q-hd-DKM"/>
+                        <switch width="1" alignment="left" value="YES" title="Cebolla" id="JBQ-qn-4EE"/>
+                        <switch width="1" alignment="left" value="YES" title="Pimiento" id="NGE-IN-UAa"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1109" y="725.5"/>
         </scene>
     </scenes>
 </document>
